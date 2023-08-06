@@ -51,18 +51,19 @@ export const Login = () => {
 				</div>
 				<div className={styles.formGroup}>
 					<label htmlFor="password">Contraseña</label>
-					<input type="password" id="password" {...register('password', { required: true })} />
+					<input type="password" id="password" {...register('password', { required: true, minLength: 7 })} />
 				</div>
 				<div className={styles.acceptTerm}>
 					<input type="checkbox" id="acceptTerms" {...register('acceptTerms', { required: true })} />
 					<label htmlFor="acceptTerms">He leido y acepto los terminos y condiciones.</label>
 				</div>
 				{errors && (
-					<p>
-						{errors.email && <span>Email es requerido</span>}
-						{errors.password && <span>Contraseña es requerido</span>}
-						{errors.acceptTerms && <span>Debes aceptar los terminos y condiciones</span>}
-					</p>
+					<>
+						{errors.email && <p>Email es requerido</p>}
+						{errors.password?.type === 'required' && <p>Contraseña es requerido</p>}
+						{errors.password?.type === 'minLength' && <p>La contraseña debe tener al menos 7 caracteres</p>}
+						{errors.acceptTerms && <p>Debes aceptar los terminos y condiciones</p>}
+					</>
 				)}
 				<Button type="submit" className={styles.submitButton} disabled={loading}>
 					Crear cuenta
