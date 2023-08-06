@@ -1,0 +1,19 @@
+@use '@theme/colors' as *;
+
+.filter-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+	margin-bottom: 2rem;
+	list-style: none;
+}
+
+.button {
+	min-width: 200px;
+}
+
+.active {
+	background: $primary;
+	border-color: $primary;
+}

@@ -1,0 +1,11 @@
+@use '@theme/colors' as *;
+
+.layout {
+	min-height: 100vh;
+	background-color: $secondary;
+}
+
+.content {
+	padding: 0 4rem;
+	background-color: $secondary;
+}

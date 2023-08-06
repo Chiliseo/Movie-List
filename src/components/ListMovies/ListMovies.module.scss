@@ -1,0 +1,29 @@
+.title {
+	margin: 4rem 0;
+	text-transform: capitalize;
+}
+
+.list {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(5, minmax(200px, 1fr));
+	list-style: none;
+}
+
+@media screen and (width <= 1024px) {
+	.list {
+		grid-template-columns: repeat(4, minmax(200px, 1fr));
+	}
+}
+
+@media screen and (width <= 900px) {
+	.list {
+		grid-template-columns: repeat(3, minmax(200px, 1fr));
+	}
+}
+
+@media screen and (width <= 768px) {
+	.list {
+		grid-template-columns: repeat(2, minmax(200px, 1fr));
+	}
+}

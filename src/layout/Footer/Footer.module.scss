@@ -1,0 +1,35 @@
+@use '@theme/fonts' as *;
+@use '@theme/colors' as *;
+
+.footer {
+	padding: 2rem 4rem;
+	background-image: url('@assets/footer-bg.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.footer-container {
+	max-width: 1040px;
+	padding: 8rem 0 0;
+}
+
+.title {
+	@include text-title-large;
+}
+
+.summary {
+	@include text-body-large;
+
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+	color: $white;
+}
+
+.badges {
+	ul {
+		display: flex;
+		align-items: center;
+		padding: 0;
+		list-style: none;
+	}
+}

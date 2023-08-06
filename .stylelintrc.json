@@ -1,0 +1,31 @@
+{
+  "customSyntax": "postcss-scss",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "px2rem"
+        ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
+    ]
+  }
+}

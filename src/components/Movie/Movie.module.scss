@@ -1,0 +1,55 @@
+@use '@theme/colors' as *;
+@use '@theme/fonts' as *;
+
+.info {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0 2rem;
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.movie {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	background-color: $primary;
+	border-radius: 50px;
+	box-shadow: 0 0 10px rgba(0 0 0 / 25%);
+	transition: all 0.3s ease-in-out;
+
+	&:hover::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(81 65 234 / 80%);
+		border-radius: 10px;
+		content: '';
+	}
+
+	&:hover .info {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.original-title {
+	margin: 0;
+
+	@include text-title-small;
+}
+
+.wrap-icons {
+	display: flex;
+	gap: 1rem;
+	font-size: 1.5rem;
+}

@@ -1,0 +1,61 @@
+@use '@theme/fonts' as *;
+@use '@theme/colors' as *;
+
+.login {
+	padding: 10rem 0;
+	background-color: $secondary;
+}
+
+.form {
+	max-width: 400px;
+	margin: 4rem 0;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+
+	label {
+		margin-bottom: 0.5rem;
+		color: $white;
+
+		@include text-body-medium;
+	}
+
+	input {
+		height: 48px;
+		padding: 0.6em 1.2em;
+		background-color: $primary;
+		border: 1px solid $primary;
+		border-radius: 50px;
+		appearance: none;
+	}
+}
+
+.accept-term {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+
+	input {
+		margin-right: 1rem;
+	}
+
+	label {
+		color: $white;
+		font-style: italic;
+
+		@include text-body-small;
+	}
+}
+
+.submit-button {
+	color: $white;
+
+	@include text-title-medium;
+}
+
+.loading {
+	margin-left: 1rem;
+}

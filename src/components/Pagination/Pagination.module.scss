@@ -1,0 +1,22 @@
+@use '@theme/colors' as *;
+
+.pagination {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	margin: 5rem 0;
+	font-size: 1.5rem;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	color: $white;
+	font-weight: bold;
+	background-color: $primary;
+	border-radius: 50%;
+}
