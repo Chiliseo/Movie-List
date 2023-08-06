@@ -1,6 +1,6 @@
 #Dacodes Movie list
 
-preview link: https://dacodes-movie-list.herokuapp.com/
+preview link: https://movie-list-silk.vercel.app
 
 ## Description
 This is a simple app to show a list of movies and their details.
